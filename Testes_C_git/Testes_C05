@@ -1,0 +1,70 @@
+00
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+		
+	result = ft_iterative_factorial(5);
+	printf("Fatorial: %i\n", result);
+}
+
+************************************************************************************************************************
+01
+
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+		
+	result = ft_recursive_factorial(3);
+	printf("Fatorial: %i\n", result);
+}
+
+************************************************************************************************************************
+02
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+		
+	result = ft_iterative_power(4, 2);
+	printf("Fatorial: %i\n", result);
+}
+
+*********************************************************************************************************************
+03
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+
+	result = ft_recursive_power(4,2);
+	printf("Potência: %i\n", result);
+}
+*********************************************************************************************************************
+04
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+		
+	result = ft_fibonacci(6);
+	printf("Fibonacci: %i\n", result);
+}
+*********************************************************************************************************************
+05
+
+
+#include <stdio.h>
+int main(void)
+{
+	int result;
+		
+	result = ft_sqrt(16);
+	printf("Raiz quadrada: %i\n", result);
+}

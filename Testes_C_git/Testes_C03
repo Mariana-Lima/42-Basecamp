@@ -1,0 +1,158 @@
+
+ex00
+
+
+#include <string.h>
+#include <stdio.h>
+int main(void)
+{
+    char *s1;
+    char *s2;
+    int repete;
+    int repete2;
+
+    s1 = "wdf";
+    s2 = "weweqasd";
+
+    repete = ft_strcmp(s1,s2);
+    repete2 = strcmp(s1,s2);
+
+    printf("Funcao Nova: %d \n", repete);
+    printf("Função Original: %d \n", repete2);
+}
+/*
+#include <stdio.h>
+int main(void)
+{
+	char s1[] = "a";
+	char s2[] = "b";
+	int resultado;
+	
+	printf("Texto original: %s\n", s1);
+	printf("Texto original: %s\n", s2);
+	resultado = ft_strcmp(s1, s2);
+	printf("Texto final: %d\n", resultado);
+	return (0);	
+}*/
+
+********************************************************************************************************************
+01
+
+
+
+#include <stdio.h>
+#include <string.h>
+int    main(void)
+{
+    char s1[6] = "texto";
+    char s2[6] = "texta";
+    char s3[6] = "texao";
+    char s4[6] = "texzo";
+    char s5[6] = "tex";
+    char s6[6] = "";
+
+    printf("Funcao original:\n");
+    printf("%d\n", strncmp(s1, s2, 4));
+    printf("%d\n", strncmp(s1, s3, 4));
+    printf("%d\n", strncmp(s1, s4, 4));
+    printf("%d\n", strncmp(s1, s4, 0));
+    printf("%d\n", strncmp(s1, s5, 4));
+    printf("%d\n", strncmp(s5, s1, 4));
+    printf("%d\n", strncmp(s1, s6, 4));
+    printf("%d\n", strncmp(s6, s1, 4));
+    printf("\n");
+    printf("Funcao exercicio:\n");
+    printf("%d\n", ft_strncmp(s1, s2, 4));
+    printf("%d\n", ft_strncmp(s1, s3, 4));
+    printf("%d\n", ft_strncmp(s1, s4, 4));
+    printf("%d\n", ft_strncmp(s1, s4, 0));
+    printf("%d\n", ft_strncmp(s1, s5, 4));
+    printf("%d\n", ft_strncmp(s5, s1, 4));
+    printf("%d\n", ft_strncmp(s1, s6, 4));
+    printf("%d\n", ft_strncmp(s6, s1, 4));
+    return (0);
+}
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char s1[] = "2345"; n =2
+	char s2[] = "2345"; c =0
+	int c = 5;
+	int resultado;
+	
+	printf("Texto original: %s\n", s1);
+	printf("Texto original: %s\n", s2);
+	printf("Texto original: %d\n", c);
+	resultado = ft_strncmp(s1, s2, c);
+	printf("Texto final: %d\n", resultado);
+	return (0);	
+}*/
+
+********************************************************************************************************************
+02
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char src[11] = "Ola";
+    char dest[60] = "teste";
+    printf("\nString antes: %s\n", src);
+    printf("\nString antes: %s\n", dest);
+    ft_strcat(dest, src);
+    printf("Depos de concatenar: %s\n\n", dest);
+
+}
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char dest[] = "olaaaaaaaaaaaaaaa";
+	char src[] = "teste";
+	
+	printf("Texto original: %s\n", dest);
+	printf("Texto original: %s\n", src);
+	
+	ft_strcat(dest, src);
+	printf("Texto final: %s\n", dest);
+	
+	return (0);	
+}*/
+
+
+********************************************************************************************************************
+03
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char src[11] = "Ola";
+    char dest[60] = "Teste";
+	int c = 5;
+    printf("\nString antes: %s\n", src);
+    printf("\nString antes: %s\n", dest);
+    ft_strncat(dest, src, c);
+    printf("Depois de concatenar: %s\n\n", dest);
+}
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char dest[] = "olaaaaaaaaaaaaaaa";
+	char src[] = "teste";
+	int n = 5;
+	
+	printf("Texto original: %s\n", dest);
+	printf("Texto original: %s\n", src);
+	
+	ft_strncat(dest, src, n);
+	printf("Texto final: %s\n", dest);
+	
+	return (0);	
+}*/

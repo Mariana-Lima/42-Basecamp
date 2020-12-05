@@ -1,0 +1,132 @@
+00
+
+#include <stdio.h>
+int main(void)
+{
+	char *texto_src = "Teste";
+	char texto_dest[7];
+	
+	ft_strcpy(texto_dest, texto_src);
+	printf("Texto destino: %s", texto_dest);
+	return (0);	
+}
+*********************************************************************************************************************
+01
+#include <stdio.h>
+int main(void)
+{
+	char *texto_src = "fefewfwefwefwf";
+	char texto_dest[7];
+	int n = 10;
+	
+	ft_strnpy(texto_dest, texto_src, n);
+	printf("Texto destino: %s", texto_dest);
+	return (0);	
+}
+
+*********************************************************************************************************************
+
+02
+
+int main(void)
+{
+	char *ptr;
+	int nr;
+	
+	ptr = "";
+	nr = ft_str_is_alpha(ptr);
+	printf("%d", nr);
+	
+	return (0);
+}
+
+*********************************************************************************************************************
+03
+
+#include <stdio.h>
+int main(void)
+{
+	char *ptr;
+	int nr;
+	
+	ptr = "";
+	nr = ft_str_is_numeric(ptr);
+	printf("%d", nr);
+	
+	return (0);
+}
+
+********************************************************************************************************************
+04
+
+
+#include <stdio.h>
+int main(void)
+{
+	char *ptr;
+	int nr;
+	
+	ptr = "";
+	nr = ft_str_is_lowercase(ptr);
+	printf("%d", nr);
+	
+	return (0);
+}
+
+********************************************************************************************************************
+05
+
+#include <stdio.h>
+int main(void)
+{
+	char *ptr;
+	int nr;
+	
+	ptr = "";
+	nr = ft_str_is_uppercase(ptr);
+	printf("%d", nr);
+	
+	return (0);
+}
+
+********************************************************************************************************************
+06
+#include <stdio.h>
+int main(void)
+{
+	char *ptr;
+	int nr;
+	
+	ptr = "";
+	nr = ft_str_is_printable(ptr);
+	printf("%d", nr);
+	
+	return (0);
+}
+
+********************************************************************************************************************
+07
+
+#include <stdio.h>
+int main(void)
+{
+	char teste[] = {"Teste"};
+	//char texto_dest[7];
+	printf("Texto original: %s\n", teste);
+	ft_strupcase(teste);
+	printf("Texto final: %s\n", teste);
+	return (0);	
+}
+
+********************************************************************************************************************
+08
+#include <stdio.h>
+int main(void)
+{
+	char teste[] = {"Teste"};
+	//char texto_dest[7];
+	printf("Texto original: %s\n", teste);
+	ft_strupcase(teste);
+	printf("Texto final: %s\n", teste);
+	return (0);	
+}

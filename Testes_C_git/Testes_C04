@@ -1,0 +1,77 @@
+00
+
+#include <stdio.h>
+
+int            ft_strlen(char *str);
+
+int            main(void)
+{
+    char string[30] = "quarentaedois";
+    unsigned int length;
+    
+    length = ft_strlen(string);
+    printf("length: %i", length);
+}
+
+*********************************************************************************************************************
+01 
+
+void        ft_putstr(char *str);
+
+int            main(void)
+{
+    char string[50] = "quarenta e dois";
+
+    ft_putstr(string);
+}
+
+
+*********************************************************************************************************************
+02
+#include <unistd.h>
+
+void    ft_putnbr(int nb);
+
+int        main(void)
+{
+    ft_putnbr(-2147483648);
+    write(1, "\n", 1);
+    ft_putnbr(0);
+    write(1, "\n", 1);
+    ft_putnbr(2147483647);
+    write(1, "\n", 1);
+}
+
+
+/*
+
+int        main(void)
+{
+    ft_putnbr(-2147483648);
+    write(1, "\n", 1);
+    ft_putnbr(0);
+    write(1, "\n", 1);
+    ft_putnbr(2147483647);
+    write(1, "\n", 1);
+
+	ft_putnbr(24);
+    write(1, "\n", 1);
+	ft_putnbr(-24);
+    write(1, "\n", 1);
+}*/
+*******************************************************************************************************************
+
+03
+#include <stdio.h>
+
+int            ft_atoi(char *str);
+
+int            main(void)
+{
+    printf("%i\n", ft_atoi("-1234567"));
+    printf("%i\n", ft_atoi("          ----+-98negativo23"));
+    printf("%i\n", ft_atoi("--13positivo"));
+    printf("%i\n", ft_atoi("banana"));
+    printf("%i\n", ft_atoi("    "));
+
+}

@@ -1,0 +1,239 @@
+00
+
+#include <stdio.h>
+
+int main(void)
+{
+    int teste;
+    int *ptr;
+
+    teste = 24;
+    ptr = &teste;
+    printf("24 %d\n", teste);
+    ft_ft(ptr);
+    printf("42: %d\n", teste);
+}
+
+*********************************************************************************************************************
+01
+
+#include <stdio.h>
+int	main(void)
+{
+    int teste;
+    int *p1;
+    int **p2;
+    int ***p3;
+    int ****p4;
+    int *****p5;
+    int ******p6;
+    int *******p7;
+    int ********p8;
+    int *********p9;
+    
+    teste = 13;
+    p1 = &teste;
+    p2 = &p1;
+    p3 = &p2;
+    p4 = &p3;
+    p5 = &p4;
+    p6 = &p5;
+    p7 = &p6;
+    p8 = &p7;
+    p9 = &p8;            
+
+    printf("13: %d\n", teste);
+    ft_ultimate_ft(p9);
+    printf("42: %d\n", teste);
+	return(0);
+}
+
+
+*********************************************************************************************************************
+
+02
+
+
+#include <stdio.h>
+
+int	main(void)
+{
+    int na;
+    int nb;
+    int *a;
+    int *b;
+
+    na = 2;
+    nb = 4;
+    a = &na;
+    b = &nb;
+
+    ft_swap(a, b);
+    printf("42: %i%i\n", na, nb);
+    
+}
+*********************************************************************************************************************
+ 03
+
+ #include <stdio.h>
+
+int	main(void)
+{
+    int a;
+    int b;
+    int x;
+    int y;
+    int *div;
+    int *mod;
+
+    a = 13;
+    b = 2;
+    div = &x;
+    mod = &y;
+    ft_div_mod(a, b, div, mod);
+    printf("resultado: %d\n", *div);
+    printf("resto: %d\n", *mod);
+}
+*********************************************************************************************************************
+04
+
+#include <stdio.h>
+
+int	main(void)
+{
+    int x;
+    int y;
+    int *a;
+    int *b;
+	
+    x = 13;
+    y = 2;
+    a = &x;
+    b = &y; 
+
+    ft_ultimate_div_mod(a, b);
+    printf("Resultado %d\n", *a);
+    printf("Resto %d\n", *b);
+	
+	return(0);
+}
+*********************************************************************************************************************
+05
+
+int	main(void)
+{
+    char *string = "quarenta e dois\0";
+    ft_putstr(string);
+	return(0);
+}
+
+*********************************************************************************************************************
+06
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+    int valores;
+	char *string= "quarentaedois";
+
+	valores = ft_strlen(string);
+    printf("13: %d\n", valores);
+	//return(0);
+}
+
+
+
+
+*********************************************************************************************************************
+*********************************************************************************************************************
+
+							TESTAR
+ex07
+
+#include <unistd.h>
+#include <stdio.h>
+
+int            main(void)
+{
+    int array[9];
+    int i;
+    int n;
+    int *pi;
+
+    i = 0;
+    write(1, "array: ", 7);
+    while(i <= 9)
+    {
+        array[i] = i;
+        n = array[i] + 48;
+        write(1, &n, 1);
+        i++;
+    }
+    write(1, "\n", 1);
+    
+    pi = array;
+    i = 0;
+    write(1, "via ponteiros:\n", 15);
+    while(i < 10)
+    {
+        printf("%d\n", *(pi + i));
+        i++;
+    }
+    
+    ft_rev_int_tab(pi, 10);
+    write(1, "invertido:\n", 11);
+    i = 0;
+    while(i < 10)
+    {
+        printf("%d\n", *(pi + i));
+        i++;
+    }
+
+    write(1, "\n", 1);
+}
+
+**********************************************************************************************************************
+Ex08
+
+#include <unistd.h>
+#include <stdio.h>
+
+int         main(void)
+{
+    int array[4];
+    int i;
+    int n;
+    int *pi;
+    
+    i = 0;
+    array[i] = 55;
+    array[i + 1]= 49;
+    array[i + 2] = 57;
+    array[i + 3] = 56;
+    array[i + 4] = 53;
+
+    while (i < 5)
+    {
+        n = array[i];
+        write(1, &n, 1);
+        write(1, ", ", 2);
+        i++;
+    }
+    
+    write(1, "\n\n", 2);
+
+    ft_sort_int_tab(array, 5);
+    
+    i = 0;
+    while (i <= 5)
+    {
+        n = array[i];
+        write(1, &n, 1);
+        write(1, ", ", 1);
+        i++;
+    }
+    return (0);
+}
+
